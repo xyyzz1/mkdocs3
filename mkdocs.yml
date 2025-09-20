@@ -1,0 +1,69 @@
+site_name: My Docs
+site_description: 这是一个关于个人笔记的文档站，提供了完善的指南。
+site_author: xyyzz
+copyright: Copyright &copy; 2024 xyy/Company. All rights reserved.
+
+# 主题配置
+theme:
+  name: material
+  language: zh
+  logo: images/mylogo.png
+  favicon: images/favicon.ico
+  
+  # 配色方案
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换至夜间模式
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+
+  # 功能特性 (修正了语法，使用列表格式)
+  features:
+    - navigation.tabs
+    - navigation.tabs.top
+    - navigation.path
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+  # 布局设置 (修正了语法)
+  layout:
+    fixed: true
+
+# Markdown扩展
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+      baselevel: 2
+      separator: "_"
+
+# 导航菜单
+nav:
+  - 首页: index.md
+  - 笔记:
+    - markdown 笔记: page2.md
+    - yaml 笔记: page3.md
+    - markdown_extension 笔记: page4.md
+
+# 额外配置
+extra:
+  author: Your Name
+
+extra_css:
+  - stylesheets/extra.css
