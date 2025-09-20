@@ -1,0 +1,40 @@
+/* 调整顶部导航栏和选项卡的背景色、文字色等 */
+.md-header {
+    background-color: var(--md-primary-fg-color); /* 使用主题主色 */
+}
+
+.md-tabs {
+    background-color: var(--md-primary-fg-color); /* 让选项卡与头部同色 */
+    color: white; /* 选项卡文字颜色 */
+    font-weight: 500; /* 字体粗细 */
+}
+
+.md-tabs__link {
+    color: white; /* 确保选项卡链接为白色 */
+    opacity: 0.5;
+    margin-top: 0.1rem; /* 微调垂直位置 */
+}
+
+.md-tabs__link:hover {
+    opacity: 1;
+    color: white;
+}
+
+/* 调整搜索框样式，使其更融入顶部 */
+.md-search__form {
+    background-color: rgba(255, 255, 255, 0.15); /* 浅色背景 */
+}
+
+.md-search__input {
+    color: white;
+}
+
+.md-search__input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 增大顶部导航选项卡的字体大小 */
+.md-tabs__link {
+    font-size: 1.2rem; /* 增大字体大小，例如从默认的 1rem 增加到 1.1rem */
+    font-weight: 600;  /* 可选：同时增加字体粗细，使其更醒目 */
+}
